@@ -4,15 +4,11 @@ import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import { Server } from "socket.io";
 import { initSocket } from "./socket";
-import userRouter from "./routes/UserRoutes";
+
 const PORT = process.env.PORT || 5000;
 dotenv.config();
 
-//Connect to database
-import "./config/db";
-
 const app = express();
-app.use("/api/user", userRouter);
 
 app.use(express.json());
 app.use(cookieParser());
