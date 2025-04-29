@@ -73,7 +73,7 @@ export default function DashboardPage() {
         socket.on("update-order-status", (orderStatus) => {
             setOrderStats(orderStatus);
         });
-    }, [socket, session]);
+    }, [session]);
 
     useEffect(() => {
         if (status === "unauthenticated") {

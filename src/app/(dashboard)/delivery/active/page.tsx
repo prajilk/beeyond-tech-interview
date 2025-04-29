@@ -146,9 +146,9 @@ export default function ActiveDeliveriesPage() {
 
     if (status === "loading" || isLoading) {
         return (
-            <div className="flex min-h-screen flex-col">
+            <div className="flex flex-col min-h-screen">
                 <Navbar />
-                <div className="flex-1 flex items-center justify-center">
+                <div className="flex items-center justify-center flex-1">
                     <p>Loading...</p>
                 </div>
             </div>
@@ -163,9 +163,9 @@ export default function ActiveDeliveriesPage() {
     }
 
     return (
-        <div className="flex min-h-screen flex-col">
+        <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="flex-1 container mx-auto py-6">
+            <main className="container flex-1 py-6 mx-auto">
                 <div className="mb-6">
                     <h1 className="text-3xl font-bold">Active Deliveries</h1>
                     <p className="text-muted-foreground">
@@ -174,12 +174,13 @@ export default function ActiveDeliveriesPage() {
                 </div>
 
                 {activeOrders.length === 0 ? (
-                    <div className="text-center py-12">
-                        <h3 className="text-lg font-medium mb-2">
+                    <div className="py-12 text-center">
+                        <h3 className="mb-2 text-lg font-medium">
                             No active deliveries
                         </h3>
-                        <p className="text-muted-foreground mb-4">
-                            You don't have any active deliveries at the moment.
+                        <p className="mb-4 text-muted-foreground">
+                            You don&apos;t have any active deliveries at the
+                            moment.
                         </p>
                         <Button onClick={() => router.push("/delivery")}>
                             Check Pending Orders
@@ -190,7 +191,7 @@ export default function ActiveDeliveriesPage() {
                         {activeOrders.map((order) => (
                             <Card key={order._id}>
                                 <CardHeader>
-                                    <div className="flex justify-between items-start">
+                                    <div className="flex items-start justify-between">
                                         <div>
                                             <CardTitle>
                                                 Order #{order._id.slice(-5)}

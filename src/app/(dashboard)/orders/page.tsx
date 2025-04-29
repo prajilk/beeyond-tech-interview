@@ -95,7 +95,7 @@ export default function OrdersPage() {
                 )
             );
         });
-    }, [socket, session]);
+    }, [session]);
 
     // useEffect(() => {
     //     if (!session?.user) return;
@@ -164,8 +164,8 @@ export default function OrdersPage() {
                             No orders yet
                         </h3>
                         <p className="mb-4 text-muted-foreground">
-                            You haven't placed any orders yet. Start by placing
-                            your first order.
+                            You haven&apos;t placed any orders yet. Start by
+                            placing your first order.
                         </p>
                         <Button onClick={() => router.push("/orders/new")}>
                             Place First Order

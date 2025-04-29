@@ -82,9 +82,9 @@ export default function DeliveryHistoryPage() {
 
     if (status === "loading" || isLoading) {
         return (
-            <div className="flex min-h-screen flex-col">
+            <div className="flex flex-col min-h-screen">
                 <Navbar />
-                <div className="flex-1 flex items-center justify-center">
+                <div className="flex items-center justify-center flex-1">
                     <p>Loading...</p>
                 </div>
             </div>
@@ -99,9 +99,9 @@ export default function DeliveryHistoryPage() {
     }
 
     return (
-        <div className="flex min-h-screen flex-col">
+        <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="flex-1 container mx-auto py-6">
+            <main className="container flex-1 py-6 mx-auto">
                 <div className="mb-6">
                     <h1 className="text-3xl font-bold">Completed Deliveries</h1>
                     <p className="text-muted-foreground">
@@ -110,12 +110,12 @@ export default function DeliveryHistoryPage() {
                 </div>
 
                 {orders.length === 0 ? (
-                    <div className="text-center py-12">
-                        <h3 className="text-lg font-medium mb-2">
+                    <div className="py-12 text-center">
+                        <h3 className="mb-2 text-lg font-medium">
                             No completed deliveries
                         </h3>
                         <p className="text-muted-foreground">
-                            You haven't completed any deliveries yet.
+                            You haven&apos;t completed any deliveries yet.
                         </p>
                     </div>
                 ) : (
