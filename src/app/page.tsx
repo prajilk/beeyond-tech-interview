@@ -4,13 +4,13 @@ import { Package, ArrowRight } from "lucide-react";
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen flex-col">
-            <header className="bg-background border-b">
-                <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <div className="flex flex-col min-h-screen">
+            <header className="border-b bg-background">
+                <div className="container flex items-center justify-between h-16 px-4 mx-auto">
                     <div className="flex items-center gap-2">
-                        <Package className="h-6 w-6" />
+                        <Package className="w-6 h-6" />
                         <span className="text-xl font-semibold">
-                            QuickCommerce
+                            QuickCommerce v2
                         </span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -28,7 +28,7 @@ export default function Home() {
 
             <main className="flex-1">
                 <section className="py-12 md:py-24 lg:py-32">
-                    <div className="container mx-auto px-4 md:px-6">
+                    <div className="container px-4 mx-auto md:px-6">
                         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
                             <div className="flex flex-col justify-center space-y-4">
                                 <div className="space-y-2">
@@ -46,7 +46,7 @@ export default function Home() {
                                     <Link href="/register">
                                         <Button size="lg" className="gap-1">
                                             Get Started{" "}
-                                            <ArrowRight className="h-4 w-4" />
+                                            <ArrowRight className="w-4 h-4" />
                                         </Button>
                                     </Link>
                                     <Link href="/login">
@@ -61,8 +61,8 @@ export default function Home() {
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="grid gap-4 p-6">
                                             <div className="flex items-center gap-4">
-                                                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
-                                                    <Package className="h-6 w-6 text-primary" />
+                                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20">
+                                                    <Package className="w-6 h-6 text-primary" />
                                                 </div>
                                                 <div className="space-y-1">
                                                     <h3 className="font-medium">
@@ -75,8 +75,8 @@ export default function Home() {
                                                 </div>
                                             </div>
                                             <div className="flex items-center gap-4">
-                                                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
-                                                    <Package className="h-6 w-6 text-primary" />
+                                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20">
+                                                    <Package className="w-6 h-6 text-primary" />
                                                 </div>
                                                 <div className="space-y-1">
                                                     <h3 className="font-medium">
@@ -89,8 +89,8 @@ export default function Home() {
                                                 </div>
                                             </div>
                                             <div className="flex items-center gap-4">
-                                                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
-                                                    <Package className="h-6 w-6 text-primary" />
+                                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20">
+                                                    <Package className="w-6 h-6 text-primary" />
                                                 </div>
                                                 <div className="space-y-1">
                                                     <h3 className="font-medium">
@@ -111,8 +111,8 @@ export default function Home() {
                 </section>
             </main>
 
-            <footer className="border-t py-6 md:py-0">
-                <div className="container mx-auto flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row px-4">
+            <footer className="py-6 border-t md:py-0">
+                <div className="container flex flex-col items-center justify-between gap-4 px-4 mx-auto md:h-16 md:flex-row">
                     <p className="text-sm text-muted-foreground">
                         &copy; {new Date().getFullYear()} QuickCommerce. All
                         rights reserved.

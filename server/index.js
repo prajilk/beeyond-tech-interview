@@ -1,25 +1,21 @@
-import express from "express";
-import cors from "cors";
-import cookieParser from "cookie-parser";
-import dotenv from "dotenv";
-import { Server } from "socket.io";
-import { initSocket } from "./socket";
+const express = require("express");
+const cors = require("cors");
+const { Server } = require("socket.io");
+const { initSocket } = require("./socket");
 
-const PORT = process.env.PORT || 5000;
-dotenv.config();
+const PORT = 5000;
 
 const app = express();
 
 app.use(express.json());
-app.use(cookieParser());
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/socket", (req, res) => {
     res.send("Server created successfully!");
 });
 
-app.post("/send-order-status", (req, res) => {
-    const roomId = req.query.roomId as string;
+app.post("/socket/send-order-status", (req, res) => {
+    const roomId = req.query.roomId;
     if (!roomId) {
         res.send("Room ID not found");
         return;
@@ -42,7 +38,7 @@ const server = app.listen(PORT, () =>
 
 const io = new Server(server, {
     cors: {
-        origin: ["http://localhost:3000"],
+        origin: ["http://localhost:3000", "http://43.204.215.55"],
         credentials: true,
     },
 });
