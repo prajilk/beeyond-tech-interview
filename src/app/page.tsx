@@ -10,7 +10,7 @@ export default function Home() {
                     <div className="flex items-center gap-2">
                         <Package className="w-6 h-6" />
                         <span className="text-xl font-semibold">
-                            QuickCommerce v2
+                            QuickCommerce v3
                         </span>
                     </div>
                     <div className="flex items-center gap-2">
