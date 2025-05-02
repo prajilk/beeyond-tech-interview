@@ -38,7 +38,7 @@ const server = app.listen(PORT, () =>
 
 const io = new Server(server, {
     cors: {
-        origin: ["http://localhost:3000", "http://43.204.215.55"],
+        origin: ["http://localhost:3000", "http://13.201.12.170"],
         credentials: true,
     },
 });
