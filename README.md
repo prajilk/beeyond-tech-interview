@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Project Assessment
 
-First, run the development server:
+This project is a full-stack application built using the Nextjs and Express.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Table of Contents
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Running the Project](#running-the-project)
+- [Technologies Used](#technologies-used)
+
+## Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/prajilk/beeyond-tech-interview.git .
+    ```
+
+2. **Install server dependencies:**
+
+    ```bash
+    cd server
+    npm install
+    ```
+
+3. **Install client dependencies:**
+
+    ```bash
+    cd ..
+    npm install
+    ```
+
+## Environment Variables
+
+Create `.env.local` files in the root directories with the following configurations:
+
+### `.env.local` file
+
+```
+MONGODB_URI = mongodb://127.0.0.1:27017/quickcommerce
+NEXTAUTH_SECRET = jwt_secret
+NEXTAUTH_URL = http://localhost:3000
+NEXT_PUBLIC_SOCKET_SERVER_URL = http://localhost:5000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Run the socket server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open a terminal and navigate to the server directory, then start the server:
 
-## Learn More
+```
+cd server && npm start
+```
+### Run the Nextjs server:
 
-To learn more about Next.js, take a look at the following resources:
+Open another terminal and navigate to the client directory, then start the client:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run dev
+```
+### Access the application:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open your browser and navigate to http://localhost:3000.
 
-## Deploy on Vercel
+## Technologies Used
+### Fronend + Backend:
+- Nextjs
+- Tailwindcss for styling
+- Shadcn for UI Components
+- MongoDB
+- Mongoose
+- Next auth
+### Backend:
+- Node.js
+- Express.js
+- socket.io
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## LIVE DEMO
+Click here to see live demo:
+http://13.233.70.51
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
